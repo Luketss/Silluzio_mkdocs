@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "silluz"
+version = "0.0.1"
+description = "documentation is the best"
+authors = ["Luketss <lucassilluzio@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+mkdocs = "^1.5.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
