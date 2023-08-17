@@ -56,6 +56,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#admonitions" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -177,10 +182,43 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Home
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -203,6 +241,23 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -217,9 +272,37 @@
                   
 
 
-  <h1>Home</h1>
-
-
+<h1 id="admonitions">Admonitions</h1>
+<h2 id="configuration">Configuration</h2>
+<pre><code>markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+</code></pre>
+<h1 id="using-abbr-from-markdown_extensions">Using <strong>abbr</strong> from markdown_extensions</h1>
+<pre><code>markdown_extensions:
+  - abbr
+</code></pre>
+<p>The <abbr title="Hyper Text Markup Language">HTML</abbr> specification
+is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
+<hr />
+<h1 id="using-admonition-from-markdown_extensions">Using <strong>admonition</strong> from markdown_extensions</h1>
+<pre><code>markdown_extensions:
+  - admonition
+</code></pre>
+<div class="admonition type">
+<p class="admonition-title">optional explicit title within double quotes</p>
+<p>Any number of other indented markdown elements.</p>
+<p>This is the second paragraph.</p>
+</div>
+<hr />
+<p>Collapsible blocks¶</p>
+<p>When Details is enabled and an admonition block is started with ??? instead of !!!, the admonition is rendered as a collapsible block with a small toggle on the right side:</p>
+<p>??? note</p>
+<div class="highlight"><pre><span></span><code>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.
+</code></pre></div>
 
 
 
